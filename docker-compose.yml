@@ -1,0 +1,43 @@
+version: '3'
+services:
+  reddit_collector:
+    build: reddit_collector/
+    volumes:
+      - ./reddit_collector:/app
+      #- ./reddit_collector/output:/app/output
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    command: mongod --quiet --logpath /dev/null #DISABLE LOGS IN MONGODB CONTAINER
+
+  etl_job:
+    build: etl_job
+    volumes:
+      - ./etl_job/:/app
+      #- ./etl_job/output:/app/output
+    depends_on:
+      #- reddit_collector
+      - mongodb
+      - postgresdb
+  postgresdb:
+    image: postgres:13.3
+    ports:
+      - 5555:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=reddits_pgdb
+  slack:
+    build: slack
+    volumes:
+      - ./slack/:/app
+    depends_on:
+      - postgresdb
+    
+
+
+
+

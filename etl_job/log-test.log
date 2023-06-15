@@ -1,0 +1,87 @@
+2023-03-31 12:35:50,741 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 12:35:50,837 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 12:35:50,849 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 12:36:11,749 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 12:36:11,853 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 12:36:11,864 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 12:36:41,931 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 12:36:42,036 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 12:36:42,048 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 12:43:37,346 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 12:43:37,458 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 12:43:37,468 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 13:08:51,543 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 13:08:51,634 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 13:08:51,645 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 13:28:36,776 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 13:28:36,884 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 13:29:30,173 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 13:29:30,282 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 13:29:30,292 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 13:30:30,593 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 13:30:30,699 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 13:30:30,709 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 13:37:55,565 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 13:37:55,658 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 13:37:55,667 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
+2023-03-31 13:38:08,585 - root - INFO - 
+---- 25 reddits extracted ----
+
+2023-03-31 13:38:08,693 - root - DEBUG - 
+---- transformation completed ----
+
+2023-03-31 13:38:08,702 - root - DEBUG - 
+---- new reddits loaded to postgres db ----
+
