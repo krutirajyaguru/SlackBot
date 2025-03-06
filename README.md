@@ -12,7 +12,6 @@ This project implements a **Dockerized Data Pipeline** that collects Reddit post
 ## Features
 - **Data Collection**: Scrapes Reddit posts and stores them in **MongoDB**.
 - **ETL Pipeline**: Extracts, transforms, and loads (ETL) data from **MongoDB** to **PostgreSQL**.
-- **Sentiment Analysis**: Uses NLP techniques to analyze sentiment.
 - **Slack Bot Integration**: Publishes top positive/negative posts to Slack.
 - **Dockerized Deployment**: Runs all services in isolated containers using **Docker Compose**.
 
