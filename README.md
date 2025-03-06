@@ -1,12 +1,13 @@
-# SlackBot
+# SlackBot 
 
 The Slack Bot project aims to develop a Python-based bot that integrates with the popular messaging platform Slack and utilizes Reddit's API to enhance collaboration and information sharing within a Slack workspace. The bot will provide various functionalities such as fetching Reddit posts, sharing them in Slack channels, and enabling users to interact with Reddit content directly from Slack.
-# Dockerized Data Pipeline for Reddit Sentiment Analysis
+
+# Dockerized Reddit Data Pipeline
 
 ## Overview
 This project implements a **Dockerized Data Pipeline** that collects Reddit posts, analyzes their sentiment, and publishes the most positive or negative posts to Slack every 10 minutes. The pipeline leverages **MongoDB**, **PostgreSQL**, and **Docker Compose** to efficiently process and store data.
 
-![Pipeline Structure](../../_images/structure_reddit.svg)
+![Pipeline Structure](Image/Project_overview.png)
 
 ## Features
 - **Data Collection**: Scrapes Reddit posts and stores them in **MongoDB**.
@@ -28,18 +29,26 @@ This project implements a **Dockerized Data Pipeline** that collects Reddit post
 
 ## Project Structure
 ```
-📂 dockerized-reddit-pipeline
-│── 📁 src                  # Source code for ETL, sentiment analysis, and bot
-│   │── etl.py              # Extract-Transform-Load (ETL) process
-│   │── sentiment_analysis.py  # NLP-based sentiment analysis
-│   │── slack_bot.py        # Slack bot integration
-│── 📁 config               # Configuration files (API keys, database connections)
-│── 📁 docker               # Docker-related files
-│   │── Dockerfile          # Docker configuration for services
-│   │── docker-compose.yml  # Orchestrate multiple containers
-│── 📁 db                   # Database initialization scripts
-│── README.md               # Project documentation
-│── requirements.txt        # Python dependencies
+📂 SlackBot
+│── 📁 etl_job                
+│   │── config.py          # Configuration files (API keys, database connections)    
+│   │── Dockerfile  
+│   │── etl.py       
+│   │── log-test.log
+│   │── requirements.txt     # Python dependencies
+│── 📁 reddit_collector
+│   │── config.py 
+│   │── Dockerfile
+│   │── get_reddits.py
+│   │── log-test.log         
+│   │── requirements.txt     # Python dependencies
+│── 📁 slack
+│   │── config.py 
+│   │── Dockerfile
+│   │── log-test.log         
+│   │── requirements.txt     # Python dependencies       
+│   │── slackbot.py             
+│── README.md                      
 ```
 
 ---
@@ -49,34 +58,20 @@ This project implements a **Dockerized Data Pipeline** that collects Reddit post
 Ensure you have the following installed:
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- Python (for local testing)
+- Python 
 
 ### Steps to Run the Project
-1. **Clone the Repository**
-   ```sh
-   git clone https://github.com/your-username/dockerized-reddit-pipeline.git
-   cd dockerized-reddit-pipeline
-   ```
-
-2. **Set Up Environment Variables**
-   Create a `.env` file in the `config/` folder with the following:
-   ```env
-   REDDIT_API_KEY=your_reddit_api_key
-   REDDIT_SECRET=your_reddit_api_secret
-   SLACK_WEBHOOK_URL=your_slack_webhook
-   ```
-
-3. **Build and Start Containers**
+1. **Build and Start Containers**
    ```sh
    docker-compose up --build
    ```
 
-4. **Check Running Containers**
+2. **Check Running Containers**
    ```sh
    docker ps
    ```
 
-5. **Monitor Logs**
+3. **Monitor Logs**
    ```sh
    docker-compose logs -f
    ```
@@ -103,17 +98,7 @@ Ensure you have the following installed:
 - **Installing and configuring Docker & Docker Compose**.
 - **Building a scalable data pipeline with ETL processes**.
 - **Working with NoSQL (MongoDB) and SQL (PostgreSQL) databases**.
-- **Implementing sentiment analysis with NLP techniques**.
 - **Integrating Slack API for automated messaging**.
-
----
-
-## Contributing
-Want to improve this project? Contributions are welcome!
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes and commit them.
-4. Open a pull request.
 
 ---
 
